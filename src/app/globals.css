@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  /* Night sky over the wheat fields — deep indigo/navy, near black */
+  --color-background: #0b1020;
+  --color-surface: #141a30;
+  --color-surface-hover: #1c2440;
+  --color-panel: #10162b;
+  --color-border: #263050;
+  --color-border-strong: #35426e;
+  --color-foreground: #f4f1e8;
+  --color-muted: #9aa4c4;
+  --color-muted-strong: #c3cae0;
+  /* Harvest amber — silo light at sunset */
+  --color-accent: #f5a623;
+  --color-accent-hover: #ffbe4d;
+  --color-accent-deep: #c9791a;
+  --color-breaking: #e8552d;
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #0b1020;
+}
+
+/* Utility: clamp headlines to a set number of lines in dense lists */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Headline hover — warm amber glow on hover */
+.headline-link {
+  transition: color 0.12s ease;
+}
+.headline-link:hover {
+  color: var(--color-accent);
+}
+
+/* Breaking-news ticker marquee */
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker-scroll 42s linear infinite;
+  will-change: transform;
+}
+
+.ticker-viewport:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+  }
+}
+
+/* Subtle grain/vignette top glow evoking a horizon at dusk */
+.horizon-glow {
+  background:
+    radial-gradient(120% 80% at 50% -10%, rgba(245, 166, 35, 0.10), transparent 60%),
+    var(--color-background);
+}
