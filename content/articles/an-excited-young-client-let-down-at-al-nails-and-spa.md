@@ -4,7 +4,7 @@ slug: "an-excited-young-client-let-down-at-al-nails-and-spa"
 category: "beauty"
 date: "2026-02-05"
 excerpt: "A young girl arrived excited for her nails and left sad after a long wait past her appointment, a service that skipped steps, a technician who shouted at her, and a 'no' that wasn't respected. A look at honoring bookings and treating young clients with patience."
-coverImage: "https://images.pexels.com/photos/34373400/pexels-photo-34373400.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop"
+coverImage: "https://images.pexels.com/photos/7446915/pexels-photo-7446915.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop"
 imageCredit: "Photo: Pexels"
 ---
 
